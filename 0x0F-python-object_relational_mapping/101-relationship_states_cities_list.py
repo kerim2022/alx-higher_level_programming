@@ -1,13 +1,19 @@
 #!/usr/bin/python3
-# Lists all States and corresponding Cities in the database hbtn_0e_101_usa.
-# Usage: ./101-relationship_states_cities_list.py <mysql username> /
-#                                                 <mysql password> /
-#                                                 <database name>
+
+"""
+    Lists all States and corresponding Cities in the database hbtn_0e_101_usa.
+    Usage: ./101-relationship_states_cities_list.py <mysql username> /
+                                                 <mysql password> /
+                                                 <database name>
+"""
+
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import State
 from relationship_city import City
+
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
